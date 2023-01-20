@@ -1,4 +1,0 @@
-= Device Monitoring
-:navtitle: Device Monitoring
-
-** xref:device-monitoring/system-metrics-battery-drain.adoc[]
