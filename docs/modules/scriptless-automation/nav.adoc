@@ -1,2 +1,4 @@
 * xref:scriptless-automation:index.adoc[]
 ** xref:scriptless-automation:test-page.adoc[]
+** xref:session-snapshot/index.adoc[]
+*** xref:session-snapshot/session-snapshot.adoc[]

@@ -1,0 +1,4 @@
+= Session Snapshots
+:navtitle: Session Snapshots
+
+* xref:session-snapshot/session-snapshot.adoc[]
