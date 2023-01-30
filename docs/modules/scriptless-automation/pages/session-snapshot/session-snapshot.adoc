@@ -10,90 +10,82 @@ Each step of your test will be displayed in a screenshot, with the element your 
 == How Does It Work?
 Session Snapshots is an automatic feature of NOVA; once you have completed a manual session and confirmed that you would like a suite of NOVA tests to be built from that manual session, you will be able to access the Test Execution Plan page for your test. This is where Session Snapshots will be displayed. Please note that NOVA is currently only available for test runs involving third-party installed applications for testing; tests performed using only native OS apps will not be viable for NOVA testing. Below is a step-by-step walkthrough to assist you with your use of Session Snapshots.
 
-1. As stated above, you will need to create a manual session that performs the steps of your desired automated test. Once that is done there are three ways to access the Test Execution Plan page, where you will be able to observe and interact with the Session Snapshots.
+1. As stated above, you will need to create a manual session that performs the steps of your desired automated test. Once that is done there are two ways to access the Test Execution Plan page, where you will be able to observe and interact with the Session Snapshots.
 +
-a.  One of the methods to navigate to the Test Execution Plan page is to go there directly after completing a manual session from which you wish to build a scriptless automated test. Once you have performed the manual steps to be included in the test and exited the session, you should see a pop-up prompt for translating the test to NOVA as seen in the image below. Click *Yes*.
+a. You can navigate to the Test Execution Plan page via a session that was previously created. Using the Search Sessions bar on the Sessions page, locate the session you wish to view and click on it. You will be redirected to the Session Overview page as seen below. Click the *Automated Test Case*.
 +
-image::click yes.png[]
+image::automated test case.png[]
 +
-You will automatically be directed to the Test Execution Plan page, specifically in the Device Bundles tab. Here you will be prompted to select a target device set for your scriptless automated test recreations, also known as "revisits". You can navigate elsewhere on the Test Execution Plan page after having selected your device group and clicked "Run Scriptless Sessions".
+Next, Click *Rerun* and select devices in the list of Device Bundles, then click the *Rerun* button.
 +
-image:SS B.png[]
+image::rerun.png[]
+image::device bundle.png[]
 +
-b. You can also navigate to the Test Execution Plan page via a session that was previously created. Using the Search Sessions bar on the Sessions page, locate the session you wish to view and click on it. You will be redirected to the Session Overview page as seen below. In the upper-right corner, click the NOVA symbol. This will take you to the Test Execution Plan page, then the Execution List tab.
+If you visit the manual session the second time, you see the NOVA icon next to the Jira Integration, click on the NOVA icon to direct to Test Run page.
 +
-image::SS E.png[]
-+
-c. The third method for accessing the Test Execution Plan page is to right-click on the session with which you wish to work. A context menu with several options will appear. Select *View Test Execution Plan* to be redirected to the Test Execution Plan page.
-+
-image::view test.png[]
+image::nova icon.png[]
 
-2. When you first access the Test Execution Plan page immediately after creating a scriptless automated session, NOVA is still processing the data from the manual session, so your Test Case page will look like this. It will take a few minutes for the tests to run and for NOVA to collect data to display in your Session Snapshots.
+b. The second method for accessing the Test Execution Plan page is to right-click on the session with which you wish to work. A context menu with several options will appear. Select *View Test Run* to be redirected to the Test Run page.
 +
-image::SS F.png[]
-+
-If you have navigated to the Test Execution Page immediately after creating a suite of NOVA tests and scheduling them to run, you will see these prompts at the side of your screen.
+image::view test run.png[]
+
+2. When you first navigate to Test Run page, you will see these prompts at the side of your screen after select device bundles.
 +
 image::SS G.png[]
 
-3. Once NOVA has completed a suite of automated tests for you, the results will be displayed in the Execution List tab of the Test Execution Plan page. Session Snapshots will display an overview of your NOVA test runs (only the suite connected to your selected primary manual session), your primary manual test Snapshots at the top of the page, and the Snapshots of the results of your automated tests.
+3. Once NOVA has completed a suite of automated tests for you, the results will be displayed at the top of the Test Run page with the title of "Test case generated from <manual session ID>. Session Snapshots will display an overview of your NOVA test runs (only the suite connected to your selected primary manual session), your primary manual test Snapshots at the top of the page, and the Snapshots of the results of your automated tests.
 +
 Each test will be listed separately according to the device and marked with the name of the device in the upper-left corner of each test's respective Snapshots box. As you can see from the image below, each step executed on the device is marked with a separate screenshot and purple indicators (arrows for swipe, dots for click/press, etc.) for any gestures performed.
 +
-image::SS H.png[]
+image::scriptless result.png[]
 
-4. Along with your primary manual test's Snapshots, the top of this page will display an overview of your entire NOVA suite connected to this primary manual session. Here you can view the number of the following: total tests executed, passing tests, tests queued up and not yet performed, actively running tests, failed tests, tests that encountered blockers, and any ignored test executions. You can also view the details of the Test Case such as device, OS, and date created. Clicking the hyperlink of "Session created at..." will redirect you to the Session Overview page for that session. For tests including 5+ steps, you can scroll to the right to view the rest of the test's Snapshots.
+4. Scroll down below the primary test you can see the following: total tests executed, passing tests, tests queued up and not yet performed, actively running tests, failed tests, tests that encountered blockers, and any ignored test executions. You can also view the details of the Test Case such as device, OS, and date created. Clicking the hyperlink of Session ID will redirect you to the Session Overview page for that session. For a session including too many steps, you can scroll right to view all the snapshots.
 +
-Below the primary test, you will also see an overview displayed for the suite of automated tests (you can name a suite's test run, or the default will be "Test Run #1, Test Run #2, etc. ...".  This overview will include the information described above in addition to the device group you selected for the test run and the status for the test Snapshots you are viewing (preparing, analyzing, completed).
+You will also see an overview displayed for the suite of automated tests (you can name a suite's test run, or the default will be "Test Run #1, Test Run #2, etc. ...". The steps the test performed and their accompanying screenshots will be displayed in the Snapshot box.
 +
-image::SS I.png[]
-
-5. If a test passes, you will see the Snapshots displayed as in the image below. The status of the test (Pass, Fail, or Block) will be shown. The steps the test performed and their accompanying screenshots will be displayed in the Snapshot box. Detected assertions will be displayed alongside the "Passed" status; clicking on the "'X' Assertions Detected" box will redirect you to the Assertion Overview tab of the Test Execution Plan page.
+5. The status of the test (pass, fail, or block) will be shown in the upper-right corner of the test Snapshot box. If a test passes, you will see the Snapshots displayed with the "Pass" status like in the image below.
 +
-image::pass.png[]
+image::pass test.png[]
 +
-In the Assertions Overview tab, you will see an overview of the assertions detected in this test, as well as the assertions themselves listed in detail below. If this test was previously blocked and any undertaken remediations resulted in new assertions, the remediations will be listed here as well.
-+
-image::SS assertion 1.png[]
-image::SS assertion 2.png[]
 
 6. If a test fails, you will see the Snapshots displayed as in the image below. The Snapshots will display all of the test steps that were successfully completed; if a step was unable to be performed, the screenshot will be empty. If the test fails and NOVA does not detect the possibility of a blocker, the test will fail without the possibility of remediation.
 +
-image::purple icon.png[]
+image::fail test.png[]
 
-7. If a test returns a blocked status, instead of a screenshot, you will see a notification box in the place of the screenshot for the blocked step. Clicking *Resolve Blocker* in the blocker notification box will take you to the Blocker remediation page. You can also navigate to the Session Overview page for the displayed test's session by clicking the purple icon beside the device name (see the circle icon below). (Displayed below are screenshots of a test with more than five steps involved, including the scroll direction to provide a visual example of navigating a long test in the UI.)
+7. If a test returns a Blocked status, instead of a screenshot, you will see a notification box in the place of the screenshot for the blocked step. Clicking *Resolve Blocker* in the blocker notification box will take you to the Blocker remediation page.
 +
-image::SS L.png[]
-image::SS M.png[]
+image::blocked test.png[]
 
 8. The blocker remediation page is where you can make attempts to resolve blocked steps in your automated tests. On the left is the remediation box, where Action and Scope for a possible remediation can be defined; the remediation options will be discussed in further detail below. To the right, NOVA displays the expected/successful screenshot from the primary manual test, and the correlative screenshot that was taken in the automated test that resulted in a blocker. You can compare these screenshots to determine how you would like to attempt remediation.
 +
-image::SS N.png[]
+image::blocker remediation.jpg[]
 
 9. The blocker remediation column has two default selections, Action and Scope; depending on the action you select you may activate additional options to choose from. "Action" defines how would like to proceed with remediation in a retest. "Scope" defines the expected scope that NOVA will apply to the remediation action. Within Action you can select Adjust Comparison, Be Creative, Ignore, and Reproduce. Within Scope you can select Aspect Ratio, Device Model, Manufacturer, and (Screen) Resolution. The Actions Reproduce and Ignore have a locked-in Scope and cannot be modified.
 +
 image::SS O.png[]
 image::SS blocker scope R1.png[]
 +
-a. The Reproduce action allows you to immediately reattempt your test to confirm that a blocker can be recreated consistently. This action is limited to the Device Model scope.
+a. The *Reproduce* action allows you to immediately reattempt your test to confirm that a blocker can be recreated consistently. This action is limited to the Device Model scope.
 +
-image::SS P.png[]
+image::reproduce.jpg[]
 +
-b. The Ignore action allows you to dismiss the results of the blocker on this test for a selected period of time. This action is limited to the Device Model scope.
+b. The *Ignore* action allows you to dismiss the results of the blocker on this test for a selected period of time. This action is limited to the Device Model scope.
 +
-image::SS Q.png[]
+image::ignore.jpg[]
 +
-c. The Adjust Comparison action allows you to attempt to adjust the expected gesture in the automated test according to several options regarding precision. Adjust Comparison has several adjustment levels you can choose from: Relaxed, Strict, Exact, and Ignored. The Test Run Scope allows you to select whether this remediation will be applied to currently running tests or to upcoming test runs.
+c. The *Adjust Comparison* action allows you to attempt to adjust the expected gesture in the automated test according to several options regarding precision. Adjust Comparison has several adjustment levels you can choose from: Relaxed, Strict, Exact, and Ignored. The Test Run Scope allows you to select whether this remediation will be applied to currently running tests or to upcoming test runs.
 +
-image::SS R.png[]
+image::adjust comparison.jpg[]
 image::SS S.png[]
 image::SS T.png[]
-image::SS test run.png[]
+image::scope.jpg[]
 +
-d. The Be Creative action enables NOVA to try a "best effort" remediation by attempting to match elements in the remediation tests.
-image:SS V.png[]
+d. The *Be Creative action enables NOVA* to try a "best effort" remediation by attempting to match elements in the remediation tests. In the *Scope*, you can choose Manufacturer or Aspect Ratio
 +
-10. Once you have defined your remediation parameters, click the *Submit* button. Once your remediation has been submitted, NOVA will automatically begin a retest. You will be taken back to the Test Execution Plan page.
+image::scope - be creative.jpg[]
+image:aspect ratio.jpg[]
++
+10. Once you have defined your remediation parameters, click the *Submit* button. Once your remediation has been submitted, NOVA will automatically begin a retest. You will be taken back to the *Test Run* page.
 
 
 
