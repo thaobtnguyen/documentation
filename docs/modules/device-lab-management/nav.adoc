@@ -1,2 +1,9 @@
 * xref:device-lab-management:index.adoc[]
+<<<<<<< HEAD
 ** xref:device-lab-management:test-page.adoc[]
+=======
+** xref:device-lab-management:test-page.adoc[]
+** xref:virtual-usb/index.adoc[]
+*** xref:virtual-usb/using-virtual-usb.adoc[]
+
+>>>>>>> parent of acff64f (update system metrics battery drains)
