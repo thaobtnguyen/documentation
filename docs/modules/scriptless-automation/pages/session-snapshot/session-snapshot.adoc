@@ -21,47 +21,47 @@ Before running an automation test, you must create a manual session that perform
 Click link:https://support.kobiton.com/hc/en-us/articles/360057791431-Getting-Started-with-Manual-Testing[here] to explore how to run a Manual Testing with Kobiton Portal.
 
 === Navigate to Test Run page
-There are two ways to access the Test Run page.
+There are two ways to access the *Test Run* page:
 
-1. On the Sessions page, locate the session you wish to view and click on it. You will be redirected to the Session Overview page as seen below. Then, click the *Automated Test Case*.
+1. On the Sessions page, locate the session you wish to view and click on it. You will be redirected to the *Session Overview* page as seen below. Then, click the *Automated Test Case*.
 +
 image::automated test case.png[]
 +
-Next, Click *Rerun* and select devices in the list of Device Bundles, then click the *Rerun* button.
+Next, Click *Rerun*. In the *Rerun Configurations* window, select devices in the list of *Device Bundles*, then click the *Rerun* button.
 +
 image::rerun.png[]
 image::device bundle.png[]
 +
-If you visit the Session Overview the second time, click on the NOVA icon next to the Jira Integration to direct to Test Run page.
+If you visit the *Session Overview* the second time, click on the NOVA icon next to the Jira Integration to direct to *Test Run* page.
 +
 image::nova icon.png[]
 
-2. The second method for accessing the Test Run page is to right-click on the session which you wish to work. A context menu with several options will appear. Select *View Test Run* to be redirected to the Test Run page.
+2. The second method for accessing the *Test Run* page is to right-click on the session which you wish to work. A context menu with several options will appear. Select *View Test Run* to be redirected to the *Test Run* page.
 +
 image::view test run.png[]
 +
-When you first navigate to Test Run page, you will see these prompts at the side of your screen after select device bundles.
+When you first navigate to *Test Run* page, you will see these prompts at the side of your screen after select device bundles.
 +
 image::SS G.png[]
 
 === Check the Scriptless result
-Once NOVA has completed a suite of automated tests for you, the results will be displayed at the top of the Test Run page with the title of "Test case generated from <manual session ID>. Session Snapshots will display an overview of your NOVA test runs (only the suite connected to your selected primary manual session), your primary manual test Snapshots at the top of the page, and the Snapshots of the results of your automated tests.
+Once NOVA has completed a suite of automated tests for you, the results will be displayed at the top of the Test Run page with the title of *"Test case generated from <manual session ID>"*. Session Snapshots will display an overview of your NOVA test runs (only the suite connected to your selected primary manual session), your primary manual test Snapshots at the top of the page, and the Snapshots of the results of your automated tests.
 
 image::scriptless results.png[]
 
 Scroll down you see the details of the automation test cases. Each test will be listed separately according to the device and marked with the name of the device.
 
-As you can see from the image below, each step executed on the device is marked with a separate screenshot and purple indicators (arrows for swipe, dots for click/press, etc.) for any gestures performed. Scroll right to view all the snapshot.
+As you can see from the image below, each step executed on the device is marked with a separate screenshot and purple indicators (arrows for swipe, dots for click/press, etc.) for any gestures performed. Scroll right to view all the snapshots.
 
 image::click session id.png[]
 
 You will also see an overview displayed for the suite of automated tests (you can name a suite's test run, or the default will be "Test Run #1, Test Run #2, etc. ...". The steps the test performed and their accompanying screenshots will be displayed in the Snapshot box.
 
-Clicking the hyperlink of Session ID will redirect you to the Session Overview page for that session.
+Clicking the hyperlink of Session ID will redirect you to the *Session Overview* page for that session.
 
 === Check the test status
 
-The status of the test (Pass, Fail, Queue up or Block) will be shown in the upper-right corner of the test Snapshot box.
+The status of the test (Pass, Fail, Queue up or Block) will be shown in the test Snapshot box.
 
 1. If a test passes, you will see the Snapshots displayed with the "Pass" status like in the image below.
 +
@@ -72,44 +72,46 @@ image::pass test.png[]
 +
 image::fail test.png[]
 
-7. If a test returns a Blocked status, instead of a screenshot, you will see a notification box in the place of the screenshot for the blocked step. Clicking *Resolve Blocker* in the blocker notification box will take you to the Blocker remediation page.
+7. If a test returns a Blocked status, instead of a screenshot, you will see a notification box in the place of the screenshot for the blocked step. Clicking *Resolve Blocker* in the blocker notification box will take you to the *Blocker Remediation* page.
 +
 image::blocked test.png[]
 
 === Resolve Blocker
 
-The blocker remediation page is where you can make attempts to resolve blocked steps in your automated tests. On the left is the remediation box, where Action and Scope for a possible remediation can be defined; the remediation options will be discussed in further detail below. To the right, NOVA displays the expected/successful screenshot from the primary manual test, and the correlative screenshot that was taken in the automated test that resulted in a blocker. You can compare these screenshots to determine how you would like to attempt remediation.
+The *Blocker Remediation* page is where you can make attempts to resolve blocked steps in your automated tests. On the left is the remediation box, where *Action* and *Scope* for a possible remediation can be defined; the remediation options will be discussed in further detail below. To the right, NOVA displays the expected/successful screenshot from the primary manual test, and the correlative screenshot that was taken in the automated test that resulted in a blocker. You can compare these screenshots to determine how you would like to attempt remediation.
 
 image::blocker remediation.png[]
 
-The Blocker Remediation column has two default selections: Action and Scope; depending on the action you select you may activate additional options to choose from.
+The *Blocker Remediation* column has two default selections: *Action* and *Scope*; depending on the action you select you may activate additional options to choose from.
 
-1. "Action" defines how would like to proceed with remediation in a retest.
+image::action and scope.png[360,520]
 
-2. "Scope" defines the expected scope that NOVA will apply to the remediation action. Within Action you can select *Adjust Comparison*, *Be Creative*, *Ignore*, and *Reproduce*. Within Scope you can select *Aspect Ratio*, *Device Model* and *Manufacturer*. The Actions Reproduce and Ignore have a locked-in Scope and cannot be modified.
+1. *"Action"* defines how would like to proceed with remediation in a retest. Within *Action* you can select *Adjust Comparison*, *Be Creative*, *Ignore*, and *Reproduce*.
 +
-image::SS O.png[]
-image::SS blocker scope R1.png[]
+image::action.png[300,500]
+
+2. *"Scope"* defines the expected scope that NOVA will apply to the remediation action.  Within *Scope* you can select *Aspect Ratio*, *Device Model* and *Manufacturer*.
 +
-2.1. The *Reproduce* action allows you to immediately reattempt your test to confirm that a blocker can be recreated consistently. This action is limited to the Device Model scope.
+image::Scope.png[300,500]
 +
-image::reproduce.jpg[]
+2.1. The *Reproduce* action allows you to immediately reattempt your test to confirm that a blocker can be recreated consistently. This action is limited to the *Device Model* scope. The action *Reproduce* has a locked-in scope and cannot be modified.
 +
-2.2. The *Ignore* action allows you to dismiss the results of the blocker on this test for a selected period of time. This action is limited to the Device Model scope.
+image::reproduce.png[300,500]
 +
-image::ignore.jpg[]
+2.2. The *Ignore* action allows you to dismiss the results of the blocker on this test for a selected period of time. This action is limited to the *Device Model* scope. Similar to *Reproduce* action, *Ignore* action has a locked-in scope.
 +
-2.3. The *Adjust Comparison* action allows you to attempt to adjust the expected gesture in the automated test according to several options regarding precision. Adjust Comparison has several adjustment levels you can choose from: Relaxed, Strict, Exact, and Ignored. The Test Run Scope allows you to select whether this remediation will be applied to currently running tests or to upcoming test runs.
+image::ignore.png[300,500]
 +
-image::adjust comparison.jpg[]
-image::SS S.png[]
-image::SS T.png[]
-image::scope.jpg[]
+2.3. The *Adjust Comparison* action allows you to attempt to adjust the expected gesture in the automated test according to several options regarding precision. *Adjust Comparison* has several adjustment levels you can choose from: *Relaxed*, *Strict*, *Exact*, and *Ignored*. The *Test Run* Scope allows you to select whether this remediation will be applied to currently running tests or to upcoming test runs.
 +
-2.4. The *Be Creative action enables NOVA* to try a "best effort" remediation by attempting to match elements in the remediation tests. In the *Scope*, you can choose Manufacturer, Device Model or Aspect Ratio.
+image::adjust compare.png[300,500]
+image::adjustment lv.png[300,500]
+image::scope adjust compare.png[300,500]
+image::test run.png[300,500]
 +
-image::scope - be creative.jpg[]
-image:aspect ratio.jpg[]
+2.4. The *Be Creative* action enables NOVA to try a "best effort" remediation by attempting to match elements in the remediation tests.
++
+image::be creative - nova.png[300,500]
 +
 Once you have defined your remediation parameters, click the *Submit* button. Once your remediation has been submitted, NOVA will automatically begin a retest. You will be taken back to the *Test Run* page.
 
