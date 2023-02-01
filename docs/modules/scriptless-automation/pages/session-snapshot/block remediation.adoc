@@ -1,0 +1,55 @@
+= Block Remediation
+:navtitle: Block Remediation
+
+The blocker remediation page is where you can make attempts to resolve blocked steps in your automated tests.
+
+
+== Overview
+The blocker remediation column has two default selections: *Action* and *Scope*.
+
+1. *"Action"* defines how would like to proceed with remediation in a retest. Within *Action* you can select *Adjust Comparison*, *Be Creative*, *Ignore*, and *Reproduce*. Depending on the *Action* you select you may activate different *Scope* options to choose from.
+
+2. *"Scope"* defines the expected scope that NOVA will apply to the remediation action. Within Scope you can select *Aspect Ratio*, *Device Model* and *Manufacturer*. Depending on the action you select you may activate different scope options to choose from.
+
+
+== Action options
+
+=== Adjust Comparison
+
+The *Adjust Comparison* action allows you to attempt to adjust the expected gesture in the automated test according to several options regarding precision. You can select options of *Adjustment level*, *Scope* and *Test Run* (only require in this action).
+
+image::adjust compare.png[300,500]
+
+*Adjust Comparison* has several adjustment levels you can choose from: *Relaxed*, *Strict*, *Exact*, and *Ignored*.
+
+image::adjustment lv.png[300,500]
+
+For *Adjust Comparison* action, all three scopes (*Aspect Ratio*, *Manufacturer*, *Device Model*) are available to select.
+
+image::scope adjust compare.png[300,500]
+
+The *Test Run* Scope allows you to select whether this remediation will be applied to currently running tests or to upcoming test runs.
+
+image::test run.png[300,500]
+
+=== Be Creative
+
+The *Be Creative* action enables NOVA to try a "best effort" remediation by attempting to match elements in the remediation tests. For this action, you can select three scopes (*Aspect Ratio*, *)
+
+image::be creative - nova.png[300,500]
+
+=== Ignore
+
+The *Ignore* action allows you to dismiss the results of the blocker on this test for a selected period of time (*Forever*, *For 15 Days*, *Ignore Once*).
+
+This action is limited to the *Device Model* scope. *Ignore* action has a locked-in scope and cannot be modified.
+
+image::ignore.png[300,500]
+
+=== Reproduce
+
+The *Reproduce* action allows you to immediately reattempt your test to confirm that a blocker can be recreated consistently. This action is limited to the *Device Model* scope. Similar to *Ignore*, the action *Reproduce* has a locked-in scope.
+
+image::reproduce.png[300,500]
+
+

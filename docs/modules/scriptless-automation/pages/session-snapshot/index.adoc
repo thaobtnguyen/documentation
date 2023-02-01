@@ -2,3 +2,4 @@
 :navtitle: Session Snapshots
 
 * xref:session-snapshot/session-snapshot.adoc[]
+* xref:session-snapshot/block remediation.adoc[]
