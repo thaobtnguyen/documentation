@@ -20,28 +20,46 @@ Before running an automation test, you must create a manual session that perform
 
 Click link:https://support.kobiton.com/hc/en-us/articles/360057791431-Getting-Started-with-Manual-Testing[here] to explore how to run a Manual Testing with Kobiton Portal.
 
-=== Navigate to Test Run page
-There are two ways to access the *Test Run* page:
+=== Navigate to Automated Test Case
+There are two ways to access the *Automated Test Case* page:
 
 1. On the Sessions page, locate the session you wish to view and click on it. You will be redirected to the *Session Overview* page as seen below. Then, click the *Automated Test Case*.
 +
 image::automated test case.png[]
 +
-Next, Click *Rerun*. In the *Rerun Configurations* window, select devices in the list of *Device Bundles*, then click the *Rerun* button.
-+
-image::rerun.png[]
-image::device bundle.png[]
-+
-If you visit the *Session Overview* the second time, click on the NOVA icon next to the Jira Integration to direct to *Test Run* page.
+If you visit the *Session Overview* the second time, click on the NOVA icon next to the Jira Integration.
 +
 image::nova icon.png[]
-
-2. The second method for accessing the *Test Run* page is to right-click on the session which you wish to work. A context menu with several options will appear. Select *View Test Run* to be redirected to the *Test Run* page.
+2. The second method  is to right-click on the session which you wish to work, select *View Test Run*.
 +
 image::view test run.png[]
 +
-When you first navigate to *Test Run* page, you will see these prompts at the side of your screen after select device bundles.
+In the *Automated Test Case* window, if you see the message *"Congratulations! Your test is good to go now"*, click *Rerun*.
 +
+image::rerun.png[]
++
+If there are overlapped elements detected, you must annotate them before *Rerun*. Unsolved overlapped elements are marked with red indicators.
++
+To do this, click *Annotate* button underneath each overlapping snapshot.
++
+image::annotation.png[]
++
+You'll be directed to *Element Selection Remediation* window. To continue, click *Submit*.
++
+image::element remediation.png[]
++
+Solved overlapped elements will be switched to purple color. Repeat the process to annotate all the overlapping elements steps until you see the message *"Congratulations! Your test case is good to go now"*. Then, click *Rerun* to continue.
++
+image::After annotation.png[]
+
+=== Select Device Bundles
+
+In the *Rerun Configurations* window, select devices in the list of *Device Bundles*, then click the *Rerun* button.
+
+image::device bundle.png[]
+
+After selecting the Device Bundles, you will see these prompts immediately from the right side.
+
 image::SS G.png[]
 
 === Check the Scriptless result
@@ -50,8 +68,7 @@ Once NOVA has completed a suite of automated tests for you, the results will be 
 image::scriptless results.png[]
 
 Scroll down you see the details of the automation test cases. Each test will be listed separately according to the device and marked with the name of the device.
-
-As you can see from the image below, each step executed on the device is marked with a separate screenshot and purple indicators (arrows for swipe, dots for click/press, etc.) for any gestures performed. Scroll right to view all the snapshots.
+Test steps executed on the device is marked with a separate screenshot and purple indicators (arrows for swipe, dots for click/press, etc.) for any gestures performed. Scroll right to view all the snapshots.
 
 image::click session id.png[]
 
@@ -68,7 +85,7 @@ The status of the test (Pass, Fail, Queue up or Block) will be shown in the test
 image::pass test.png[]
 +
 
-6. If a test fails, you will see the Snapshots displayed as in the image below. The Snapshots will display all of the test steps that were successfully completed; if a step was unable to be performed, the screenshot will be empty. If the test fails and NOVA does not detect the possibility of a blocker, the test will fail without the possibility of remediation.
+6. If a test fails, the snapshots will display all of the test steps that were successfully completed; if a step was unable to be performed, the screenshot will be empty. If the test fails and NOVA does not detect the possibility of a blocker, the test will fail without the possibility of remediation.
 +
 image::fail test.png[]
 
@@ -84,12 +101,12 @@ image::blocker remediation.png[]
 
 On the right, NOVA displays the expected/successful screenshot from the primary manual test, and the correlative screenshot that was taken in the automated test that resulted in a blocker. You can compare these screenshots to determine how you would like to attempt remediation.
 
-On the left is the Block Remediation box with two default selections: *Action* and *Scope*. *"Action"* defines how would like to proceed with remediation in a retest. *"Scope"* defines the expected scope that NOVA will apply to the remediation action.
+On the left is the Blocker Remediation box with two default selections: *Action* and *Scope*. *"Action"* defines how would like to proceed with remediation in a retest. *"Scope"* defines the expected scope that NOVA will apply to the remediation action.
 
 image::action and scope.png[360,520]
 
 
-The remediation options will be discussed in a separate article xref:session-snapshot/block remediation.adoc[Block Remediation].
+The remediation options will be discussed in a separate article xref:session-snapshot/blocker remediation.adoc[Blocker Remediation].
 
 
 Once you have defined your remediation parameters, click the *Submit* button. Once your remediation has been submitted, NOVA will automatically begin a retest. You will be taken back to the *Test Run* page.

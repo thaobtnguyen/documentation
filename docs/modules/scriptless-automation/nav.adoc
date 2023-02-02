@@ -2,4 +2,4 @@
 ** xref:scriptless-automation:test-page.adoc[]
 ** xref:session-snapshot/index.adoc[]
 *** xref:session-snapshot/session-snapshot.adoc[]
-*** xref:session-snapshot/block remediation.adoc[]
+*** xref:session-snapshot/blocker remediation.adoc[]

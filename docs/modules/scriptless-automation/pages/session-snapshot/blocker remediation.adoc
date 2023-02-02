@@ -1,5 +1,5 @@
-= Block Remediation
-:navtitle: Block Remediation
+= Blocker Remediation
+:navtitle: Blocker Remediation
 
 The blocker remediation page is where you can make attempts to resolve blocked steps in your automated tests.
 
@@ -34,15 +34,14 @@ image::test run.png[300,500]
 
 === Be Creative
 
-The *Be Creative* action enables NOVA to try a "best effort" remediation by attempting to match elements in the remediation tests. For this action, you can select three scopes (*Aspect Ratio*, *)
+The *Be Creative* action enables NOVA to try a "best effort" remediation by attempting to match elements in the remediation tests. For this action, you can select three scopes (*Aspect Ratio*, *Manufacturer*, *Device Model*)
 
 image::be creative - nova.png[300,500]
 
 === Ignore
 
 The *Ignore* action allows you to dismiss the results of the blocker on this test for a selected period of time (*Forever*, *For 15 Days*, *Ignore Once*).
-
-This action is limited to the *Device Model* scope. *Ignore* action has a locked-in scope and cannot be modified.
+*Ignore* action has a locked-in scope and cannot be modified.
 
 image::ignore.png[300,500]
 
