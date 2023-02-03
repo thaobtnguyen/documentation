@@ -1,0 +1,18 @@
+= Overlapped Element
+:navtitle: Overlapped Element
+
+Overlapped elements may occur sometimes in automated test case due to NOVA is unable to track your intention. Unsolved test steps with overlapped elements are marked with red indicator.
+
+To solve this, click *Annotate* button underneath snapshots.
+
+image::annotation.png[]
+
+You'll be directed to *Element Selection Remediation* window. On the left side, hover to define elements.
+
+After selecting the element, click *Submit*.
+
+image::element remediation.png[]
+
+Solved overlapped elements will be switched to purple color. Repeat the process to annotate all the overlapping elements steps until you see the message *"Congratulations! Your test case is good to go now"*. Then, click *Rerun* to continue.
+
+image::After annotation.png[]

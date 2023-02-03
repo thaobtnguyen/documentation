@@ -38,19 +38,11 @@ In the *Automated Test Case* window, if you see the message *"Congratulations! Y
 +
 image::rerun.png[]
 +
-If there are overlapped elements detected, you must annotate them before *Rerun*. Unsolved overlapped elements are marked with red indicators.
-+
-To do this, click *Annotate* button underneath each overlapping snapshot.
+If you encounter a warning, you must annotate overlapped elements before *Rerun*. Unsolved overlapped elements are marked with red indicators.
 +
 image::annotation.png[]
 +
-You'll be directed to *Element Selection Remediation* window. To continue, click *Submit*.
-+
-image::element remediation.png[]
-+
-Solved overlapped elements will be switched to purple color. Repeat the process to annotate all the overlapping elements steps until you see the message *"Congratulations! Your test case is good to go now"*. Then, click *Rerun* to continue.
-+
-image::After annotation.png[]
+Check the article xref:session-snapshot/overlapped-element.adoc[Overlapped Element] to explore how to Annotate.
 
 === Select Device Bundles
 
