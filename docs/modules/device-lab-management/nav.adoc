@@ -1,4 +1,2 @@
 * xref:device-lab-management:index.adoc[]
 ** xref:device-lab-management:test-page.adoc[]
-
->>>>>>> parent of acff64f (update system metrics battery drains)

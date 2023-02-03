@@ -1,6 +1,2 @@
 = Device Lab Management
 :navtitle: Device Lab Management
-
-
-
->>>>>>> parent of acff64f (update system metrics battery drains)
